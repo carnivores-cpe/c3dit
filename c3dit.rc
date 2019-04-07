@@ -1,0 +1,204 @@
+#include "header.h"
+#include "version.h"
+
+1 24 "C3Dit.exe.Manifest"
+
+
+ID_TB_IMAGE BITMAP "toolbar_buttons.bmp"
+
+
+IDR_MENU MENU
+{
+  POPUP "&File"
+  {
+    MENUITEM "&New", IDF_NEW
+    MENUITEM "&Open", IDF_OPEN
+    MENUITEM "Save &As", IDF_SAVEAS
+    MENUITEM SEPARATOR
+	
+	/*POPUP "Recent Files"
+	{
+		MENUITEM "allo.car", 0
+	}
+	MENUITEM SEPARATOR*/
+	
+    MENUITEM "E&xit", IDF_EXIT
+  }
+
+	POPUP "&View"
+	{
+		MENUITEM "Perspective", IDV_PERSPECTIVE
+		MENUITEM "First Person", IDV_PERSPECTIVE+7
+		MENUITEM "Left", IDV_PERSPECTIVE+1
+		MENUITEM "Right", IDV_PERSPECTIVE+2
+		MENUITEM "Front", IDV_PERSPECTIVE+3
+		MENUITEM "Back", IDV_PERSPECTIVE+4
+		MENUITEM "Top", IDV_PERSPECTIVE+5
+		MENUITEM "Bottom", IDV_PERSPECTIVE+6
+		MENUITEM SEPARATOR
+		MENUITEM "Bones", IDV_BONES, CHECKED
+		MENUITEM "Joints", IDV_JOINTS, CHECKED
+		MENUITEM "Wireframe", IDF_WIRE
+		MENUITEM "Lighting\tSHIFT+L", IDF_LIGHT
+		MENUITEM "Axes", IDV_AXES, CHECKED
+		MENUITEM "Grid", IDV_GRID, CHECKED
+		MENUITEM "Specular", IDV_SPECULAR, CHECKED
+		MENUITEM "EnvMap", IDV_ENVMAP, CHECKED
+
+  }
+
+  POPUP "&Texture"
+  {
+    MENUITEM "Import Texture", IDF_IMTEX
+    MENUITEM "Export Texture", IDF_EXTEX
+    MENUITEM SEPARATOR
+    MENUITEM "Flip UV Map", IDT_FLIPUV
+  }
+
+  POPUP "&Data"
+  {
+    POPUP "Tools"
+    {
+        MENUITEM "Flip Triangles", IDT_FLIPTRIS
+        MENUITEM "Swap Y -> Z", 0, GRAYED//IDT_FLIPXYZ
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Animations", IDF_ANI
+    MENUITEM "Sounds", IDF_SND
+    MENUITEM "Properties", IDF_PROPERTIES
+  }
+
+  POPUP "&Help"
+  {
+    MENUITEM "&Help", IDF_HELP
+    //MENUITEM "Update", IDF_UPDATE, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "About", IDF_ABOUT
+  }
+}
+
+
+ID_DLG_CAR DIALOGEX 0, 0, 128, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Properties"
+FONT 10, "Calibri"
+{
+    LTEXT "Name",       0,  4,  16, 32, 12
+    EDITTEXT ID_NAME,       32,  16, 48, 12, ES_LEFT | ES_AUTOHSCROLL
+    LTEXT "Radius",     0,  4,  29, 32, 12
+    EDITTEXT ID_O_RADIUS,   32,  29, 48, 12, ES_LEFT | ES_NUMBER
+    LTEXT "ZMin",     0,    4,  42, 32, 12
+    EDITTEXT ID_O_YLO,      32,  42, 32, 12, ES_LEFT | ES_NUMBER
+    LTEXT "ZMax",     0,    65,  42, 32, 12
+    EDITTEXT ID_O_YHI,      96,  42, 32, 12, ES_LEFT | ES_NUMBER
+}
+
+ID_dlg_ANI DIALOGEX 0, 0, 128, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+//EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Animations"
+FONT 10, "Calibri"
+{
+    PUSHBUTTON "Close", IDB_CLOSE, 95, 113, 32, 14, BS_DEFPUSHBUTTON
+    PUSHBUTTON "Save",  IDB_SAVE,  62, 113, 32, 14
+    PUSHBUTTON "Open",  IDB_OPEN,  30, 113, 32, 14
+	PUSHBUTTON "Apply",  IDF_UPDATE,  4,  98,  24, 12
+    //PUSHBUTTON "Prev",  IDB_PREV,  4,  98,  24, 12
+    //PUSHBUTTON "Next",  IDB_NEXT,  30, 98,  24, 12
+    //Animation info
+    GROUPBOX "Animation", 0, 1, 1, 126, 111
+    LTEXT "Name",        0, 4,  16, 72, 12
+    LTEXT "Anim KPS:",   0, 4,  29, 72, 12
+    LTEXT "Anim Time:",  0, 4,  42, 72, 12
+    LTEXT "Frames:",     0, 4,  55, 40, 12
+    EDITTEXT ID_NAME,  48,  16, 72, 12, ES_LEFT | ES_AUTOHSCROLL
+    EDITTEXT ID_AKPS,  48,  29, 72, 12, ES_LEFT | ES_NUMBER
+    EDITTEXT ID_ATIME, 48,  42, 72, 12, ES_LEFT | ES_NUMBER | ES_READONLY
+    EDITTEXT ID_AFRM,  50,  55, 72, 12, ES_LEFT | ES_NUMBER | ES_READONLY
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Sound Dialog
+//
+
+ID_dlg_SND DIALOGEX 0, 0, 128, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "Sounds"
+FONT 10, "Calibri"
+{
+    PUSHBUTTON "Close", IDB_CLOSE, 95, 113, 32, 14, BS_DEFPUSHBUTTON
+    PUSHBUTTON "Save",  IDB_SAVE,  62, 113, 32, 14
+    PUSHBUTTON "Open",  IDB_OPEN,  30, 113, 32, 14
+    //PUSHBUTTON "Prev",  IDB_PREV,  4,  98,  24, 12
+    //PUSHBUTTON "Next",  IDB_NEXT,  30, 98,  24, 12
+    //PUSHBUTTON "Play",  IDB_SPLAY, 56, 98,  24, 12
+    PUSHBUTTON "Apply",  IDF_UPDATE,  4,  98,  24, 12
+	PUSHBUTTON "Play",  IDB_SPLAY, 30, 98,  24, 12
+	//Animation info
+    GROUPBOX "Sound", 0, 1, 1, 126, 111
+    LTEXT "Name",       0,  4,  16, 72, 12
+    LTEXT "Size:",      0,  4,  29, 72, 12
+    EDITTEXT ID_NAME,  48,  16, 72, 12, ES_LEFT | ES_AUTOHSCROLL
+    LTEXT "0 Kbs", ID_SIZE, 50, 29, 72, 12
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// About Dialog
+//
+
+ID_ABOUT_DIALOG DIALOGEX 0, 0, 200, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "About"
+//FONT 10, "Calibri"
+{
+	LTEXT "", ID_ABOUT_TEXT, 5, 5, 197, 100
+    PUSHBUTTON "Ok", ID_ABOUT_OK, 95, 113, 32, 14, BS_DEFPUSHBUTTON
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO		VERSIONINFO
+FILEVERSION			RESOURCE_VERSION
+PRODUCTVERSION		1,0,0,0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+   BLOCK "StringFileInfo"
+   {
+       BLOCK "040904e4"
+	   {
+           VALUE "CompanyName", "EpicZen"
+           VALUE "FileDescription", "Carnivores 3D Editor"
+           VALUE "FileVersion", RESOURCE_VERSION
+           VALUE "InternalName", "C3Dit.exe"
+           VALUE "LegalCopyright", "(c) 2011 EpicZen.  All rights reserved."
+           VALUE "OriginalFilename", "C3Dit.exe"
+           VALUE "ProductName", "C3Dit"
+           VALUE "ProductVersion", "1.0\0"
+	   }
+   }
+   BLOCK "VarFileInfo"
+   {
+       //VALUE "Translation", 0x409, 1252
+	   VALUE "Translation", 0xc09, 3081
+   }
+}
