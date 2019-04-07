@@ -1,45 +1,21 @@
-﻿  declarations.cpp
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C2146: syntax error : missing ';' before identifier 'UOW'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C2146: syntax error : missing ';' before identifier 'g_rgSCardT0Pci'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(64): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(756): error C2061: syntax error : identifier 'LPCSCARD_IO_REQUEST'
-h:\source\c3dit\header.h(8): fatal error C1083: Cannot open include file: 'gl/glext.h': No such file or directory
-  Ini.cpp
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C2146: syntax error : missing ';' before identifier 'UOW'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C2146: syntax error : missing ';' before identifier 'g_rgSCardT0Pci'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(64): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(756): error C2061: syntax error : identifier 'LPCSCARD_IO_REQUEST'
-h:\source\c3dit\header.h(8): fatal error C1083: Cannot open include file: 'gl/glext.h': No such file or directory
-  main.cpp
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C2146: syntax error : missing ';' before identifier 'UOW'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C2146: syntax error : missing ';' before identifier 'g_rgSCardT0Pci'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(64): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(756): error C2061: syntax error : identifier 'LPCSCARD_IO_REQUEST'
-h:\source\c3dit\header.h(8): fatal error C1083: Cannot open include file: 'gl/glext.h': No such file or directory
-  renderer.cpp
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C2146: syntax error : missing ';' before identifier 'UOW'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winnt.h(14619): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C2146: syntax error : missing ';' before identifier 'g_rgSCardT0Pci'
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(64): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winscard.h(756): error C2061: syntax error : identifier 'LPCSCARD_IO_REQUEST'
-h:\source\c3dit\header.h(8): fatal error C1083: Cannot open include file: 'gl/glext.h': No such file or directory
-  Generating Code...
+﻿  renderer.cpp
+c3dit.rc(89): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(91): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(93): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(112): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(113): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(114): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(115): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(144): warning RC2182: duplicate dialog control ID 0
+  
+c3dit.rc(145): warning RC2182: duplicate dialog control ID 0
+  
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
+  C3Dit.vcxproj -> E:\Source\Carnivores Development\C3Dit\Release\C3Dit.exe

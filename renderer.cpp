@@ -9,9 +9,9 @@ using namespace std;
 #define glIsSupported(ext) (bool(strstr((char*)glGetString(GL_EXTENSIONS),(char*)ext)!=NULL))
 
 
-PFNGLACTIVETEXTUREARBPROC           glActiveTextureARB;
-PFNGLCLIENTACTIVETEXTUREARBPROC     glClientActiveTextureARB;
-PFNGLMULTITEXCOORD2FARBPROC         glMultiTexCoord2fARB;
+PFNGLACTIVETEXTUREARBPROC           i_glActiveTextureARB;
+PFNGLCLIENTACTIVETEXTUREARBPROC     i_glClientActiveTextureARB;
+PFNGLMULTITEXCOORD2FARBPROC         i_glMultiTexCoord2fARB;
 
 
 typedef struct _GLvertex {
@@ -151,9 +151,9 @@ void EnableOpenGL(HWND hwnd, HDC* hDC, HGLRC* hRC, int cbits, int dbits )
 
     if (glIsSupported("GL_ARB_multitexture"))
     {
-        glActiveTextureARB = (PFNGLACTIVETEXTUREARBPROC)wglGetProcAddress("glActiveTextureARB");
-        glClientActiveTextureARB = (PFNGLCLIENTACTIVETEXTUREARBPROC)wglGetProcAddress("glClientActiveTextureARB");
-        glMultiTexCoord2fARB = (PFNGLMULTITEXCOORD2FARBPROC)wglGetProcAddress("glMultiTexCoord2fARB");
+        i_glActiveTextureARB = (PFNGLACTIVETEXTUREARBPROC)wglGetProcAddress("glActiveTextureARB");
+        i_glClientActiveTextureARB = (PFNGLCLIENTACTIVETEXTUREARBPROC)wglGetProcAddress("glClientActiveTextureARB");
+        i_glMultiTexCoord2fARB = (PFNGLMULTITEXCOORD2FARBPROC)wglGetProcAddress("glMultiTexCoord2fARB");
 
         GLint MaxTexLayers;
         glGetIntegerv(GL_MAX_TEXTURE_UNITS_ARB, &MaxTexLayers);
