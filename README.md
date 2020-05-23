@@ -52,9 +52,9 @@ Errors are logged to `error.log` and may be attached to any bug reports.
 
 ## Credits
 ----
-###Code Contributors
+### Code Contributors
 * Rexhunter99
 
-###Research
+### Research
 * Machf
 * Dinoguy1000
