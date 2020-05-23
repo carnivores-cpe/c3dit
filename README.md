@@ -1,4 +1,4 @@
-#C3Dit - Carnivores Character 3D Editor
+# C3Dit - Carnivores Character 3D Editor
 **Version: 2.0.0**  
 **Date: DD MM 2020**  
 **A Carnivores-CPE project**  
