@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="c3dit.rc" open="1" top="0" tabpos="1">
-		<Cursor position="1812" topLine="51" />
+	<File name="cwindow.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="601" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="declarations.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="369" topLine="2" />
+	<File name="cwindow.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="50" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="header.h" open="1" top="0" tabpos="5">
-		<Cursor position="5997" topLine="250" />
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="88817" topLine="2925" />
-	</File>
-	<File name="renderer.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="14045" topLine="465" />
-	</File>
-	<File name="version.h" open="0" top="0" tabpos="0">
-		<Cursor position="391" topLine="1" />
+	<File name="main.cpp" open="1" top="1" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5845" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

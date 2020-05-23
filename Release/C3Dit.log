@@ -1,21 +1,32 @@
-﻿  renderer.cpp
+﻿  declarations.cpp
+  IniFile.cpp
+  main.cpp
+main.cpp(815): warning C4804: '<=' : unsafe use of type 'bool' in operation
+main.cpp(822): warning C4804: '<=' : unsafe use of type 'bool' in operation
+  Mathematics.cpp
+  vec3.cpp
+  VideoGL.cpp
+  Generating Code...
+c3dit.rc(87): warning RC2182: duplicate dialog control ID 0
+  
 c3dit.rc(89): warning RC2182: duplicate dialog control ID 0
   
 c3dit.rc(91): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(93): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(117): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(112): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(118): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(113): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(119): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(114): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(120): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(115): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(121): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(144): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(149): warning RC2182: duplicate dialog control ID 0
   
-c3dit.rc(145): warning RC2182: duplicate dialog control ID 0
+c3dit.rc(150): warning RC2182: duplicate dialog control ID 0
   
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
-  C3Dit.vcxproj -> E:\Source\Carnivores Development\C3Dit\Release\C3Dit.exe
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
+  C3Dit.vcxproj -> C:\Users\James\Documents\Visual Studio 2010\Projects\c3dit\Release\C3Dit.exe
