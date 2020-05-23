@@ -5,17 +5,17 @@
 **Home:** [GitHub](https://github.com/carnivores-cpe/c3dit)
 
 
-##Disclaimer
+## Disclaimer
 ----
 C3Dit is an experimental modding tool in heavy development, we take no responsibility for any damage it may or may not cause to your game files, make backups of your files before you use the tool.
 
 
-##License
+## License
 ----
 > LICENSE.md
 
 
-##Changelog
+## Changelog
 ----
 2.0.0
 
@@ -31,7 +31,7 @@ C3Dit is an experimental modding tool in heavy development, we take no responsib
 * Direct3D 9.0 Renderer
 
 
-##Main
+## Main
 ----
 Using an external modelling utility such as Blender, AutoDesk 3D Studio Max, AutoDesk GMax and so on, you now have the capability to create your own Carnivores compatible model formats for creatures, weapons, scenery and more!
 
@@ -39,7 +39,7 @@ C3Dit is a utility specifically designed to work with the AtmosFear 2 engine fil
 Specifically it is made to produce functional .CAR files for use with the game, it can also export .3DF files.
 
 
-##Instructions
+## Instructions
 ----
 Unzip the application into some preferred location such as "Documents\Carnivores Modding\C3Dit\"
 Open the directory in which you unzipped C3Dit, click on the `C3Dit.exe` executable to run the application.
@@ -50,7 +50,7 @@ If for some reason an application setting is causing C3Dit to crash, you can del
 Errors are logged to `error.log` and may be attached to any bug reports.
 
 
-##Credits
+## Credits
 ----
 ###Code Contributors
 * Rexhunter99
