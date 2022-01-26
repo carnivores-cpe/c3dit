@@ -1730,6 +1730,9 @@ void LoadCARData(char* fname)
     //Animation-Sound Table
     fread(&Model.AnimFX,64,4,fp);
 
+    // Close file
+    fclose(fp);
+
     // Set Status bar
     char sstr[64];
     sprintf(sstr,"Triangles: %u", (UINT)Model.num_tris);
