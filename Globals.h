@@ -5,7 +5,6 @@
 //#include "Model.h"
 
 #include <string>
-using namespace std;
 
 
 class Globals
@@ -22,10 +21,10 @@ public:
 	~Globals(){}
 
 	//Global Variables
-	string		GameLocation;
-	string		WorkingDirectory;
-	string		EnvironmentMap;
-	string		SpecularMap;
+	std::string		GameLocation;
+	std::string		WorkingDirectory;
+	std::string		EnvironmentMap;
+	std::string		SpecularMap;
 
 	int			WinX, WinY, WinW, WinH;
 	bool		Maximized;
@@ -39,6 +38,8 @@ class GlobalVariables
 private:
 
 	GlobalVariables(){}
+	GlobalVariables(const GlobalVariables&) = delete;
+	GlobalVariables(GlobalVariables&&) = delete;
 
 public:
 

@@ -3,11 +3,11 @@
 
 #include <windows.h>
 #include <commctrl.h>
-#include <gl/gl.h>
-#include <gl/glu.h>
-#include <gl/glext.h>
-#include <math.h>
-#include <stdio.h>
+#include <gl/GL.h>
+#include <gl/GLU.h>
+#include <gl/GLEXT.h>
+#include <cmath>
+#include <cstdio>
 
 #include "version.h"
 #include "Ini.h"

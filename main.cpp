@@ -13,8 +13,6 @@
 #include <vector>
 #include <string>
 
-using namespace std;
-
 
 string statMessages[] = {
     "Holding the right mouse button lets you orbit the object!",
@@ -40,7 +38,6 @@ void LoadCARData(char*);
 void LoadC2OData(char*);
 void Load3DFData(char*);
 void LoadOBJData(char*);
-void SaveEZJSOBJData(char *);
 
 
 BOOL CALLBACK AniDlgProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam);
@@ -498,21 +495,19 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     g_TVItems.clear();
 
-	{
-		gIniFile->SetValueString( "General", "gamedir", GlobalData->GameLocation );
-		gIniFile->SetValueString( "General", "envmap", GlobalData->EnvironmentMap );
-		gIniFile->SetValueString( "General", "specular", GlobalData->SpecularMap );
-		gIniFile->SetValueInt( "General", "software", false );
+	gIniFile->SetValueString( "General", "gamedir", GlobalData->GameLocation );
+	gIniFile->SetValueString( "General", "envmap", GlobalData->EnvironmentMap );
+	gIniFile->SetValueString( "General", "specular", GlobalData->SpecularMap );
+	gIniFile->SetValueInt( "General", "software", false );
 
-		gIniFile->SetValueInt( "Window", "left", WinX );
-		gIniFile->SetValueInt( "Window", "top", WinY );
-		gIniFile->SetValueInt( "Window", "width", WinW );
-		gIniFile->SetValueInt( "Window", "height", WinH );
+	gIniFile->SetValueInt( "Window", "left", WinX );
+	gIniFile->SetValueInt( "Window", "top", WinY );
+	gIniFile->SetValueInt( "Window", "width", WinW );
+	gIniFile->SetValueInt( "Window", "height", WinH );
 
-		gIniFile->SetValueInt( "OpenGL", "color", GlobalData->BufferColorBits );
-		gIniFile->SetValueInt( "OpenGL", "depth", GlobalData->BufferDepthBits );
-		gIniFile->SetValueInt( "OpenGL", "mipmaps", GlobalData->UseMipMaps );
-	}
+	gIniFile->SetValueInt( "OpenGL", "color", GlobalData->BufferColorBits );
+	gIniFile->SetValueInt( "OpenGL", "depth", GlobalData->BufferDepthBits );
+	gIniFile->SetValueInt( "OpenGL", "mipmaps", GlobalData->UseMipMaps );
 
 	delete gIniFile;
 
@@ -622,6 +617,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
                 if (ParItem == rootNodes[TV_ANIMATIONS]) // Animations
                 {
+                    // TODO: 
                     CUR_ANIM = ((UINT)nmtv->itemNew.lParam - (UINT)&g_Animations[0]) / sizeof(TVtl);
 					CUR_FRAME = 0;
                     SendMessage(g_AniTrack, TBM_SETRANGE, (WPARAM)TRUE, (LPARAM)MAKELONG(0, ( g_Animations[CUR_ANIM].FrameCount-1 ) ) );
@@ -1752,6 +1748,7 @@ void LoadCARData(char* fname)
     hResMenu = GetSubMenu(hMenu, 0);
     EnableMenuItem(hResMenu, IDF_SAVEAS, MF_BYCOMMAND | (TRUE ? MF_ENABLED : MF_GRAYED));*/
 
+    RedrawWindow(g_FileView, nullptr, nullptr, RDW_UPDATENOW);
 	UpdateWindow(g_FileView);
     UpdateWindow(g_hMain);
 }
@@ -2002,7 +1999,6 @@ void loadCAR()
     char sstr[64];
     sprintf(sstr,"Triangles: %u",(UINT)Model.num_tris);
     SendMessage(gHStatus, SB_SETTEXT, 0, (LPARAM)sstr);
-    MessageBox(g_hMain,sstr,"triangles",MB_OK);
     return;
 }
 
@@ -2142,45 +2138,6 @@ void SaveOBJData(char *fname)
                                         g_Triangles[t].v2+1, (t*3)+2,
                                         g_Triangles[t].v3+1, (t*3)+3 );
     }
-
-    fclose(fp);
-
-    return;
-}
-
-void SaveEZJSOBJData(char *fname)
-{
-    // -- Saves the mesh as an EpicZenVideo-JS primitive script
-    FILE *fp = fopen(fname,"w");
-
-    fprintf(fp, "function Create_%s_Primitive()\n{\n", Model.name);
-
-    fprintf(fp, "\tmesh = new EZprimitive( EZPT_TRIANGLES );\n", Model.name);
-
-    for (int t=0; t<Model.num_tris; t++)
-    {
-        fprintf(fp, "\tmesh.AddVertex( %f, %f, %f, [1.0, 1.0, 1.0, 1.0], null, [ %f, %f ] );\n",
-			g_Verticies[ g_Triangles[t].v1 ].mX,
-			g_Verticies[ g_Triangles[t].v1 ].mY,
-			g_Verticies[ g_Triangles[t].v1 ].mZ,
-			g_Triangles[t].tx1 / 255.0f,
-			g_Triangles[t].ty1 / 255.0f);
-		fprintf(fp, "\tmesh.AddVertex( %f, %f, %f, [1.0, 1.0, 1.0, 1.0], null, [ %f, %f ] );\n",
-			g_Verticies[ g_Triangles[t].v2 ].mX,
-			g_Verticies[ g_Triangles[t].v2 ].mY,
-			g_Verticies[ g_Triangles[t].v2 ].mZ,
-			g_Triangles[t].tx2 / 255.0f,
-			g_Triangles[t].ty2 / 255.0f);
-		fprintf(fp, "\tmesh.AddVertex( %f, %f, %f, [1.0, 1.0, 1.0, 1.0], null, [ %f, %f ] );\n",
-			g_Verticies[ g_Triangles[t].v3 ].mX,
-			g_Verticies[ g_Triangles[t].v3 ].mY,
-			g_Verticies[ g_Triangles[t].v3 ].mZ,
-			g_Triangles[t].tx3 / 255.0f,
-			g_Triangles[t].ty3 / 255.0f);
-    }
-
-	fprintf( fp, "\tmesh.End();\n" );
-	fprintf( fp, "}\n" );
 
     fclose(fp);
 
@@ -2625,10 +2582,6 @@ void SaveProject()
     {
         SaveOBJData(fileName);
     }
-	if ( strstr(_strlwr(fileName),".js") )
-	{
-		SaveEZJSOBJData(fileName);
-	}
 }
 
 

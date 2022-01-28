@@ -1,7 +1,8 @@
 
 #include "header.h"
 #include "Ini.h"
-#include <stdio.h>
+#include <cstdio>
+#include <cstdlib>
 
 
 //===========================================================//
@@ -142,12 +143,10 @@ INIFILE::~INIFILE()
 
 	fp = fopen( Name.c_str(), "w" );
 
-	for ( int s=0; s<Groups.size(); ++s )
-	{
+	for (auto s = 0u; s<Groups.size(); ++s ) {
 		fprintf( fp, "[%s]\n", Groups[s].mName.c_str()  );
 
-		for ( int k=0; k<Groups[s].mKeys.size(); ++k )
-		{
+		for (auto k=0u; k<Groups[s].mKeys.size(); ++k ) {
 			fprintf( fp, "%s=%s\n", Groups[s].mKeys[k].mName.c_str(), Groups[s].mKeys[k].mValue.c_str() );
 		}
 
