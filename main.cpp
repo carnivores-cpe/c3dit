@@ -759,10 +759,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     }
     break;
 
-    case WM_MOVE:
-        WinX = LOWORD(lParam);
-        WinY = HIWORD(lParam);
-        break;
+    case WM_MOVE: {
+        //WinX = LOWORD(lParam);
+        //WinY = HIWORD(lParam);
+
+        auto winpos = MAKEPOINTS(lParam);
+        WinX = winpos.x;
+        WinY = winpos.y;
+    } break;
 
     case WM_DESTROY:
 		{
