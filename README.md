@@ -1,7 +1,7 @@
 # C3Dit - Carnivores Character 3D Editor
-**Version: 22.1**
-**A Carnivores-CPE project**
+**Version:** 22.1
 **Homepage:** [GitHub](https://github.com/carnivores-cpe/c3dit)
+A *Carnivores-CPE* project
 
 
 ## Disclaimer
@@ -53,39 +53,3 @@ Errors are logged to `error.log` and should be attached to any bug reports.
 ### Research
 * Machf
 * Dinoguy1000
-
-
-
-
-
-
-
-
-C3Dit - Carnivores 3D Editor
-Version: 2022.1
-GitHub: https://github.com/carnivores-cpe/c3dit
-
-
-Enable word wrap for optimal viewing experience.
-
-
-=====================Disclaimer========================
-C3Dit is an open-source experimental modding tool that is under development, contributors take no responsibility for any damage it may or may not cause to your hardware or software, make backups of your files before you use the tool and also for optimal protection, create a new resore point before using it as well.
-
-
-=====================Installation========================
-Unzip the application into some preferred location such as "Documents/Carnivores Modding/C3Dit/"
-Open the directory in which you unzipped C3Dit, click on the C3Dit executable to run the application.
-Viola installation complete.
-
-Carnivores does not use the registry, it creates a binary settings file within the application directory labelled "settings.ini".
-
-
-=====================Main============================
-Using an external modelling utility such as Blender, GMax, 3dsMax, etc; you now have the capability to create your own Carnivores compatible model formats for creatures, weapons, scenery and more!
-C3Dit is a utility specifically designed to work with the AtmosFear 2 engine file formats.
-
-
-=====================Credits==========================
-Action Forms
-Rexhunter99
