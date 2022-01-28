@@ -1,0 +1,432 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Carnivores Programming Community (CPE)"
+            VALUE "FileDescription", "Carnivores Character 3D Editor"
+            VALUE "FileVersion", "2.0.0.0"
+            VALUE "InternalName", "C3Dit.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2020"
+            VALUE "OriginalFilename", "C3Dit.exe"
+            VALUE "ProductName", "C3Dit"
+            VALUE "ProductVersion", "2.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOGEX 0, 0, 407, 255
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,294,234,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,350,234,50,14
+    GROUPBOX        "Renderer",IDC_STATIC,6,144,175,84
+    COMBOBOX        IDC_SETTINGS_RENDERAPI,96,156,78,13,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "API",IDC_STATIC,18,156,72,12,SS_CENTERIMAGE
+    CONTROL         "Shaders",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_LEFT | BS_VCENTER | WS_TABSTOP,18,174,156,12
+    GROUPBOX        "Key Bindings",IDC_STATIC,202,6,198,222
+    GROUPBOX        "General",IDC_STATIC,6,6,175,96
+END
+
+IDD_OBJECT_PROPERTIES DIALOGEX 0, 0, 261, 276
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Object Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,156,258,50,14
+    PUSHBUTTON      "Close",IDCANCEL,208,258,50,14
+    GROUPBOX        "Bounding",IDC_STATIC,6,24,120,78
+    LTEXT           "Radius",IDC_STATIC,24,42,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_RADIUS,60,42,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Y Low",IDC_STATIC,24,60,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_YLOW,60,60,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_OBJECT_YHIGH,60,78,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Y High",IDC_STATIC,24,78,36,8,SS_CENTERIMAGE
+    GROUPBOX        "Line",IDC_STATIC,138,24,120,60
+    LTEXT           "Length",IDC_STATIC,156,43,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_LINELENGTH,192,43,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Intensity",IDC_STATIC,156,60,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_LINEINTENSITY,192,60,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Circle",IDC_STATIC,138,90,120,60
+    LTEXT           "Radius",IDC_STATIC,156,109,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_CIRCLERADIUS,192,109,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Intensity",IDC_STATIC,156,127,36,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_CIRCLEINTENSITY,192,127,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Flags",IDC_STATIC,6,108,120,162
+    CONTROL         "Place on water",IDC_FLAGS_PLACEWATER,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,120,108,8
+    CONTROL         "Place on terrain",IDC_FLAGS_PLACEGROUND,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,132,108,8
+    CONTROL         "Place custom",IDC_FLAGS_PLACEUSER,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,144,108,8
+    CONTROL         "ofCIRCLE",IDC_FLAGS_CIRCLE,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,156,108,8
+    CONTROL         "ofBOUND",IDC_FLAGS_BOUND,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,168,108,8
+    CONTROL         "Disable Billboard",IDC_FLAGS_NOBMP,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,180,108,8
+    CONTROL         "Full Bright",IDC_FLAGS_NOLIGHT,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,192,108,8
+    CONTROL         "Terrain Light",IDC_FLAGS_GROUNDLIGHT,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,216,108,8
+    CONTROL         "Default Light",IDC_FLAGS_DEFLIGHT,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,204,108,8
+    CONTROL         "No Software 2",IDC_FLAGS_NOSOFT2,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,240,108,8
+    CONTROL         "No Software 1",IDC_FLAGS_NOSOFT,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,228,108,8
+    CONTROL         "Animated",IDC_FLAGS_ANIMATED,"Button",BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,12,252,108,8
+    GROUPBOX        "Other",IDC_STATIC,138,156,120,96
+    LTEXT           "GrRad",IDC_STATIC,150,174,48,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_GRRAD,198,174,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    LTEXT           "Default Light",IDC_STATIC,150,192,48,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_LASTANITIME,198,210,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    LTEXT           "LastAniTime",IDC_STATIC,150,210,48,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_OBJECT_BOUNDR,198,228,48,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "BoundR",IDC_STATIC,150,228,48,8,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_OBJECT_DEFAULTLIGHT,198,192,48,12
+    EDITTEXT        IDC_NAME,108,6,144,12,ES_CENTER | ES_AUTOHSCROLL
+    CTEXT           "Name",IDC_STATIC,6,6,102,12,SS_CENTERIMAGE
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 309, 176
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,132,156,50,14
+    LTEXT           "Static",IDC_ABOUT_IMAGE,12,42,72,72,SS_CENTERIMAGE | WS_BORDER
+    CTEXT           "Static",IDC_ABOUT_TEXT,90,18,210,126
+END
+
+IDD_SOUND DIALOGEX 0, 0, 231, 140
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sound Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,120,119,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,119,50,14
+    COMBOBOX        IDC_SELECTION,6,6,216,12,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sound Properties",IDC_STATIC,6,42,216,72
+    EDITTEXT        IDC_NAME,120,54,96,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DATA_LENGTH,120,73,96,12,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Save",IDC_SAVE,120,90,96,14
+    DEFPUSHBUTTON   "Open",IDC_OPEN,12,90,96,14
+    DEFPUSHBUTTON   "Delete",IDC_DELETE,162,24,60,14
+    DEFPUSHBUTTON   "New",IDC_NEW,6,24,60,14
+    DEFPUSHBUTTON   "Insert",IDC_INSERT,84,24,60,14
+    LTEXT           "Name",IDC_STATIC,12,54,102,12,SS_CENTERIMAGE
+    LTEXT           "Byte size",IDC_STATIC,12,72,102,12,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "Play",IDC_PLAY,7,119,50,14
+END
+
+IDD_ANIMATION DIALOGEX 0, 0, 231, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Animation Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,120,180,50,14
+    PUSHBUTTON      "Close",IDCANCEL,174,180,50,14
+    COMBOBOX        IDC_SELECTION,8,7,216,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Animation Properties",IDC_STATIC,6,42,216,132
+    EDITTEXT        IDC_NAME,120,54,96,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DATA_LENGTH,120,72,96,12,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    DEFPUSHBUTTON   "Save",IDC_SAVE,120,150,96,14
+    DEFPUSHBUTTON   "Open",IDC_OPEN,12,150,96,14
+    DEFPUSHBUTTON   "Delete",IDC_DELETE,162,24,60,14
+    DEFPUSHBUTTON   "New",IDC_NEW,6,24,60,14
+    DEFPUSHBUTTON   "Insert",IDC_INSERT,84,24,60,14
+    LTEXT           "Name",IDC_STATIC,12,54,102,12,SS_CENTERIMAGE
+    LTEXT           "Frame count",IDC_STATIC,12,72,102,12,SS_CENTERIMAGE
+    LTEXT           "KPS",IDC_STATIC,12,90,102,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_KPS,120,90,96,12,ES_AUTOHSCROLL | ES_NUMBER
+    COMBOBOX        IDC_SOUND,84,132,132,12,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sound effect",IDC_STATIC,12,132,66,12,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 400
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_OBJECT_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_SOUND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_ANIMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SETTINGS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OBJECT_PROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SOUND AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ANIMATION AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        ID_FILE_NEW
+        MENUITEM "&Open",                       ID_FILE_OPEN
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Recent Files...",            ID_FILE_RECENTFILES, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Camera"
+        BEGIN
+            MENUITEM "Perspective / 3D",            ID_CAMERA_PERSPECTIVE
+            MENUITEM "Orthographic / 2D",           ID_CAMERA_ORTHOGRAPHIC
+            MENUITEM "First Person",                ID_CAMERA_FIRSTPERSON
+            MENUITEM SEPARATOR
+            MENUITEM "[+X] Left",                   ID_CAMERA_LEFT
+            MENUITEM "[-X] Right",                  ID_CAMERA_RIGHT
+            MENUITEM "[+Y] Top",                    ID_CAMERA_TOP
+            MENUITEM "[-Y] Bottom",                 ID_CAMERA_BOTTOM
+            MENUITEM "[+Z] Front",                  ID_CAMERA_FRONT
+            MENUITEM "[-Z] Back",                   ID_CAMERA_BACK
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Lighting",                    ID_VIEW_LIGHTING
+        MENUITEM "Wireframe",                   ID_VIEW_WIREFRAME
+        MENUITEM "Solid",                       ID_VIEW_SOLID
+        MENUITEM "Grid",                        ID_VIEW_GRID
+        MENUITEM "Axis",                        ID_VIEW_AXIS
+        MENUITEM "Bones",                       ID_VIEW_BONES
+        MENUITEM "Joints",                      ID_VIEW_JOINTS
+    END
+    POPUP "&Data"
+    BEGIN
+        POPUP "Model"
+        BEGIN
+            MENUITEM "Object Info",                 ID_MODEL_OBJECTINFO
+            MENUITEM "Swap Z -> Y",                 ID_MODEL_SWAPZ
+            MENUITEM "Swap X -> Z",                 ID_MODEL_SWAPX
+        END
+        POPUP "Texture"
+        BEGIN
+            MENUITEM "Import",                      ID_TEXTURE_IMPORT
+            MENUITEM "Export",                      ID_TEXTURE_EXPORT
+            MENUITEM "Flip UV",                     ID_TEXTURE_FLIPUV
+        END
+        MENUITEM "Animation",                   ID_TOOLS_ANIMATION
+        MENUITEM "Sound",                       ID_TOOLS_SOUND
+    END
+    POPUP "&Editor"
+    BEGIN
+        MENUITEM "&Update",                     ID_EDITOR_UPDATE
+        MENUITEM "&Settings",                   ID_EDITOR_SETTINGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Tutorials",                  ID_HELP_YOUTUBE, INACTIVE
+        MENUITEM "&GitHub",                     ID_HELP_GITHUB
+        MENUITEM "&Discord",                    ID_HELP_DISCORD
+        MENUITEM SEPARATOR
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_REXHU               BITMAP                  "rexhu.bmp"
+
+IDR_TOOLBAR1            BITMAP                  "toolbar1.bmp"
+
+IDB_TOOLBAR_ICONS       BITMAP                  "toolbar_buttons.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_TB_FILE_NEW
+    BUTTON      ID_TB_FILE_OPEN
+    BUTTON      ID_TB_FILE_SAVE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_TB_FILE_NEW          "Start a new project..."
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

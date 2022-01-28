@@ -1,0 +1,17 @@
+#pragma once
+#ifndef VERSION_H
+#define VERSION_H
+
+
+#define VERSION_MAJOR		2
+#define VERSION_MINOR		0
+#define VERSION_REVISION	0
+
+#define VERSION_STR "2.0.0"
+
+#define MACROSTRING(x) #x
+
+#define RESOURCE_VERSION VERSION_MAJOR,VERSION_MINOR,VERSION_REVISION,0
+#define RESOURCE_VERSION_STR(a,b,c) MACROSTRING(a) "." MACROSTRING(b) "." MACROSTRING(c) ".0"
+
+#endif //VERSION_h

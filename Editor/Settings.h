@@ -1,0 +1,7 @@
+#pragma once
+#ifndef SETTINGS_H_INCLUDED
+#define SETTINGS_H_INCLUDED
+
+
+
+#endif // SETTINGS_H_INCLUDED
