@@ -1,0 +1,12 @@
+[submodule "glm"]
+	path = glm
+	url = https://github.com/g-truc/glm
+[submodule "stb"]
+	path = stb
+	url = https://github.com/nothings/stb
+[submodule "vcpkg"]
+	path = vcpkg
+	url = https://github.com/Microsoft/vcpkg
+[submodule "glad"]
+	path = glad
+	url = https://github.com/Dav1dde/glad
